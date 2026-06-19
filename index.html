@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>爱游戏 · 日常查询与延伸阅读</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #fafaf9;
+      font-family: 'Georgia', 'Times New Roman', 'Noto Serif SC', serif;
+      color: #1e1e1e;
+      line-height: 1.8;
+      padding: 2rem 1.2rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .page {
+      max-width: 720px;
+      width: 100%;
+    }
+
+    .hero {
+      margin-top: 3.2rem;
+      margin-bottom: 4rem;
+    }
+
+    .hero .short-line {
+      font-size: 1rem;
+      letter-spacing: 0.03em;
+      color: #7c7c7c;
+      border-left: 2px solid #c0b7a9;
+      padding-left: 1.2rem;
+      margin-bottom: 1.8rem;
+    }
+
+    .hero h1 {
+      font-weight: 400;
+      font-size: 2.6rem;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+      color: #121212;
+      margin-top: 0.6rem;
+    }
+
+    .hero h1 small {
+      display: block;
+      font-size: 1rem;
+      font-weight: 350;
+      color: #6f6f6f;
+      margin-top: 0.8rem;
+      letter-spacing: 0.03em;
+    }
+
+    .intro {
+      font-size: 1.05rem;
+      color: #2a2a2a;
+      margin-bottom: 2.8rem;
+      padding-bottom: 1.6rem;
+      border-bottom: 1px solid #e2ddd6;
+    }
+
+    .intro p {
+      margin-bottom: 1.2rem;
+    }
+
+    .subhead {
+      font-size: 1.25rem;
+      font-weight: 400;
+      color: #3d3d3d;
+      margin: 2.4rem 0 1.4rem 0;
+      padding-bottom: 0.3rem;
+      border-bottom: 1px dashed #d6cfc4;
+    }
+
+    .feature-list {
+      list-style: none;
+      margin-bottom: 3rem;
+    }
+
+    .feature-list li {
+      padding: 0.9rem 1rem 0.9rem 2.2rem;
+      position: relative;
+      border-bottom: 1px solid #efebe6;
+      font-size: 1rem;
+      color: #2e2e2e;
+    }
+
+    .feature-list li::before {
+      content: "·";
+      position: absolute;
+      left: 0.7rem;
+      top: 0.9rem;
+      font-size: 1.4rem;
+      color: #b8aa95;
+      line-height: 1;
+    }
+
+    .scene-block {
+      background: #f5f2ed;
+      padding: 1.8rem 2rem;
+      margin: 2.2rem 0 3rem 0;
+      border-radius: 2px;
+      font-size: 0.98rem;
+      color: #353535;
+    }
+
+    .scene-block p {
+      margin-bottom: 0.8rem;
+    }
+
+    .scene-block .tag {
+      display: inline-block;
+      background: #d9d2c8;
+      color: #2b2b2b;
+      padding: 0.2rem 0.8rem;
+      font-size: 0.75rem;
+      letter-spacing: 0.04em;
+      margin-right: 0.6rem;
+      border-radius: 12px;
+    }
+
+    .faq-note {
+      margin-top: 3rem;
+      padding: 1.6rem 0;
+      border-top: 1px solid #e2ddd6;
+      font-size: 0.95rem;
+      color: #4a4a4a;
+    }
+
+    .faq-note strong {
+      font-weight: 500;
+      color: #1f1f1f;
+    }
+
+    .faq-note .q {
+      margin: 1rem 0 0.3rem 0;
+    }
+
+    .closing {
+      margin: 3.6rem 0 2.4rem 0;
+      padding: 1.6rem 0 0.2rem 0;
+      border-top: 1px solid #ddd8d0;
+      font-size: 1rem;
+      color: #3b3b3b;
+      line-height: 1.9;
+    }
+
+    .closing a {
+      color: #6b4f3c;
+      text-decoration: none;
+      border-bottom: 1px solid #cbb9a6;
+      transition: border-color 0.15s;
+    }
+
+    .closing a:hover {
+      border-bottom-color: #6b4f3c;
+    }
+
+    .foot {
+      margin-top: 3.8rem;
+      font-size: 0.8rem;
+      color: #9b958e;
+      text-align: center;
+      border-top: 1px solid #e7e2da;
+      padding-top: 1.6rem;
+    }
+
+    @media (max-width: 520px) {
+      body {
+        padding: 1.2rem 1rem;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .scene-block {
+        padding: 1.4rem 1.2rem;
+      }
+
+      .feature-list li {
+        padding-left: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="hero">
+      <div class="short-line">有时候只是随手翻一翻，就找到了想要的线索。</div>
+      <h1>
+        对照、查询与延伸
+        <small>一个日常的使用视角</small>
+      </h1>
+    </div>
+
+    <div class="intro">
+      <p>
+        很多人在查找某款游戏的信息时，都会同时打开两三个页面：一篇评测、一个论坛讨论帖、还有某个比较全面的索引站。在这样一种场景里，<a href="https://official-zh-i-game.com.cn" style="color:#6b4f3c; text-decoration:none; border-bottom:1px solid #cbb9a6;">爱游戏</a> 常常被当成一个安静的参照——它不会提供令人分心的排行榜，也没有闪烁的广告横幅，只是把条目、版本、发行时间这类基础信息整理好，方便你在阅读别处的内容时回头核对。
+      </p>
+      <p>
+        这种使用方式听起来很平淡，但次数多了就会发现它的好处：你不需要记住每一款作品的发售年份，也不用担心搜索时被带偏，只需要打开一个页面，找到那个词条，剩下的判断可以由自己来做。
+      </p>
+    </div>
+
+    <h2 class="subhead">几个常见的使用方向</h2>
+    <ul class="feature-list">
+      <li>对照不同地区版本的中文译名与发行日期——尤其是那些在多个平台登陆的老作品</li>
+      <li>快速查阅系列作品的发行顺序，避免按记忆排序时出现错位</li>
+      <li>延伸阅读时确认一下制作人员或发行商信息，省去来回翻找的麻烦</li>
+      <li>偶尔发现某个条目下附带了一段开发背景简述，比预想中更值得读完</li>
+    </ul>
+
+    <div class="scene-block">
+      <p><span class="tag">日常场景</span> 有人在整理一份个人游戏清单，把玩过的、听过的、想补的分别列出来。开到一半发现某部作品的英文标题和中文译名对不上，于是打开 <a href="https://official-zh-i-game.com.cn" style="color:#6b4f3c; text-decoration:none; border-bottom:1px solid #cbb9a6;">爱游戏</a> 逐条对照。花了大约十五分钟，把混淆的部分理清了，顺便还注意到同一系列里有一部外传之前完全没留意过。</p>
+      <p style="margin-bottom:0;">很多时候，一个安静的索引比一篇热闹的推荐文章更接近你想找的答案。</p>
+    </div>
+
+    <div class="faq-note">
+      <strong>一些随手记下的问题</strong>
+      <div class="q">Q：页面上没有评分和推荐，怎么判断值不值得花时间？</div>
+      <p style="margin-bottom:0.6rem;">—— 它的定位是资料站，而不是评分站。我觉得这样反而更干净：你可以在别处读完评测，再回来确认细节，两个页面各司其职。</p>
+      <div class="q">Q：内容更新频率怎么样？</div>
+      <p style="margin-bottom:0;">—— 不算快，但基础条目的准确度比较高。对于查询老作品来说，这比追求“最新”更可靠。</p>
+    </div>
+
+    <div class="closing">
+      <p>
+        说到底，一个查询入口不需要太复杂。打开页面，找到对应的条目，看完，关掉。整个过程如果顺畅得让人注意不到，那大概就是它最理想的状态。如果你也需要这样一个安静的对照工具，不妨把 <a href="https://official-zh-i-game.com.cn">爱游戏</a> 放在书签里，下次整理资料时或许用得上。
+      </p>
+    </div>
+
+    <div class="foot">
+      — 一个日常查询页 · 无干扰 · 仅供对照参考 —
+    </div>
+  </div>
+</body>
+</html>
