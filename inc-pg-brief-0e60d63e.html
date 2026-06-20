@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PG官网 · 生成与创意</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #f8fbfc;
+            color: #1a2b3c;
+            line-height: 1.6;
+            padding: 0 1.25rem;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2.5rem 0 3rem;
+        }
+
+        /* hero */
+        .hero {
+            text-align: center;
+            padding: 3.5rem 1rem 2.5rem;
+            background: linear-gradient(145deg, #e6f3f0 0%, #d2ebe5 100%);
+            border-radius: 2rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 8px 20px rgba(60, 140, 130, 0.08);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            color: #115c51;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero .sub {
+            font-size: 1.1rem;
+            color: #2f6b61;
+            max-width: 600px;
+            margin: 0 auto 1.2rem;
+            opacity: 0.85;
+        }
+
+        .hero .meta {
+            display: inline-block;
+            background: #ffffffc0;
+            backdrop-filter: blur(4px);
+            padding: 0.4rem 1.2rem;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            color: #1f6e5e;
+            border: 1px solid #b6dad0;
+        }
+
+        /* 网格卡片区 */
+        .grid-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.8rem;
+            margin: 2.8rem 0;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 1.5rem;
+            padding: 1.8rem 1.5rem;
+            box-shadow: 0 6px 14px rgba(30, 100, 90, 0.04);
+            border: 1px solid #d4e6e1;
+            transition: transform 0.2s ease, box-shadow 0.25s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 14px 24px rgba(30, 100, 90, 0.08);
+            border-color: #aad0c7;
+        }
+
+        .card .icon {
+            font-size: 1.8rem;
+            margin-bottom: 0.3rem;
+            color: #1b7f6b;
+        }
+
+        .card h3 {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #175a4d;
+            margin-bottom: 0.5rem;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: #2c4b44;
+        }
+
+        /* 说明区（图文混合） */
+        .intro-block {
+            background: #f1f9f6;
+            border-radius: 2rem;
+            padding: 2.2rem 2rem;
+            margin: 2.5rem 0;
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .intro-block h2 {
+            font-size: 1.6rem;
+            font-weight: 450;
+            color: #125a4b;
+            letter-spacing: -0.01em;
+            border-left: 5px solid #2a9d86;
+            padding-left: 1rem;
+        }
+
+        .intro-block p {
+            max-width: 780px;
+            color: #1d463e;
+        }
+
+        .intro-block .highlight {
+            background: #d7eee8;
+            padding: 0.1rem 0.6rem;
+            border-radius: 12px;
+            color: #0e5c4a;
+            font-weight: 450;
+        }
+
+        /* FAQ 摘要 (紧凑) */
+        .faq-summary {
+            background: white;
+            border-radius: 2rem;
+            padding: 2rem 1.8rem;
+            margin: 2.8rem 0;
+            border: 1px solid #cfe3dd;
+            box-shadow: 0 4px 10px rgba(40, 110, 100, 0.03);
+        }
+
+        .faq-summary h2 {
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: #135f4f;
+            margin-bottom: 1.2rem;
+        }
+
+        .faq-item {
+            padding: 0.7rem 0;
+            border-bottom: 1px solid #deede8;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-q {
+            font-weight: 500;
+            color: #1d5649;
+            margin-bottom: 0.1rem;
+        }
+
+        .faq-a {
+            color: #2c5950;
+            font-size: 0.95rem;
+        }
+
+        /* 底部链接 */
+        .footer-links {
+            margin-top: 2.8rem;
+            padding: 1.8rem 0 1rem;
+            border-top: 1px solid #d0e2db;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .footer-links .site-label {
+            font-size: 0.95rem;
+            color: #29685b;
+        }
+
+        .footer-links a {
+            color: #1b7a65;
+            text-decoration: none;
+            border-bottom: 1px dotted #7fb7ab;
+            font-weight: 450;
+            transition: border 0.2s, color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: #0b4d3f;
+            border-bottom: 1px solid #0b4d3f;
+        }
+
+        .footnote {
+            font-size: 0.85rem;
+            color: #4b7870;
+            margin-top: 0.5rem;
+            text-align: center;
+            width: 100%;
+        }
+
+        /* 响应式微调 */
+        @media (max-width: 640px) {
+            .hero h1 {
+                font-size: 1.9rem;
+            }
+            .hero {
+                padding: 2.5rem 1rem;
+            }
+            .grid-cards {
+                grid-template-columns: 1fr;
+                gap: 1.2rem;
+            }
+            .intro-block {
+                padding: 1.5rem;
+            }
+            .faq-summary {
+                padding: 1.5rem;
+            }
+            .footer-links {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- hero 区 -->
+    <section class="hero">
+        <h1>从生成到落地</h1>
+        <p class="sub">围绕关键词「PG官网」—— 我们关注结构、内容与呈现的平衡。不只是入口，更是站点叙事的起点。</p>
+        <span class="meta">落地页式 · 蓝绿调 · 卡片网格</span>
+    </section>
+
+    <!-- 优势区：卡片网格 -->
+    <div class="grid-cards">
+        <div class="card">
+            <div class="icon">◈</div>
+            <h3>结构清晰</h3>
+            <p>信息层级分明，从标题到段落都有呼吸感，适合阅读型访客。</p>
+        </div>
+        <div class="card">
+            <div class="icon">◈</div>
+            <h3>克制叙述</h3>
+            <p>避免堆砌与夸张，用平实的语言解释功能与场景，保持真诚。</p>
+        </div>
+        <div class="card">
+            <div class="icon">◈</div>
+            <h3>移动优先</h3>
+            <p>每个组件都经过断点设计，在小屏幕上依然保留卡片与间距的层次。</p>
+        </div>
+        <div class="card">
+            <div class="icon">◈</div>
+            <h3>蓝绿点缀</h3>
+            <p>以低饱和青绿为基调，用高亮色区分重点，不刺眼且具备区分度。</p>
+        </div>
+    </div>
+
+    <!-- 说明区：围绕主题展开 -->
+    <div class="intro-block">
+        <h2>关于 PG 官网 · 从关键词开始</h2>
+        <p>「PG」在不同语境下有不同解读。这里我们把它理解为一个站点代号：<span class="highlight">内容生成、页面结构、视觉节奏</span>三者合一。我们不主张用浮夸的标语去定义它，而是让每个区块自己说话。</p>
+        <p>这个页面从关键词背后的主题出发——如何让一个介绍页既有信息密度又不显拥挤？答案是：利用网格卡片承载优势，用 FAQ 摘要回应常见疑问，再通过链接将访客自然引向 <a href="https://inc-pg.com" style="color: #136b59; text-decoration: underline; text-underline-offset: 3px; font-weight: 450;">PG官网</a>。</p>
+        <p>内容撰写上，我们选择一种略带叙述感的语气，就像在向朋友介绍项目的初衷：不绕弯子，也不过度包装。</p>
+    </div>
+
+    <!-- FAQ 摘要 -->
+    <section class="faq-summary">
+        <h2>常见疑问 · 摘要</h2>
+        <div class="faq-item">
+            <div class="faq-q">这个页面适合什么场景？</div>
+            <div class="faq-a">适合作为项目或品牌的一页式介绍，兼顾展示与引导。也可作为官网的引导页雏形。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">为什么选择蓝绿色作为点缀？</div>
+            <div class="faq-a">蓝绿色系在视觉上给人稳定、克制的感受，同时能与白色背景形成柔和对比，不易疲劳。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">卡片网格的用意是什么？</div>
+            <div class="faq-a">用卡片承载独立信息块，让访客可以快速扫描，也方便在移动端以单列形式继续阅读。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">是否可以基于这个页面继续扩展？</div>
+            <div class="faq-a">完全可以。当前结构预留了内容容器，新增模块时只需保持一致的间距与卡片风格即可。</div>
+        </div>
+    </section>
+
+    <!-- 底部链接 -->
+    <footer class="footer-links">
+        <div>
+            <span class="site-label">相关资源 ·</span>
+            <a href="https://inc-pg.com">PG官网</a>
+            <span style="margin:0 0.4rem; color:#73a99b;">/</span>
+            <a href="#" style="border-bottom: none; color: #3f7b6d; cursor: default; text-decoration: none;">关于本站</a>
+        </div>
+        <div class="footnote">
+            © 2025 · 页面内容基于创作种子变化生成 · 无诱导表述
+        </div>
+    </footer>
+</div>
+</body>
+</html>
